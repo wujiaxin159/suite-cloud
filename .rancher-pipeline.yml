@@ -3,5 +3,5 @@ stages:
   steps:
   - runScriptConfig:
       image: maven:3-jdk-8
-      shellScript: |-
-        mvn clean install
+      shellScript: mvn clean deploy:deploy-file
+notification: {}
