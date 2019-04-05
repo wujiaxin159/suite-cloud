@@ -2,7 +2,7 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: maven:3.6.0-jdk-8-alpine
+      image: suite-cloud/suite-cloud-maven
       shellScript: mvn deploy:deploy-file
 - name: Publish
   steps:
