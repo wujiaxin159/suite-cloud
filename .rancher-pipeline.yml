@@ -3,18 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: 10.0.0.203:5000/suite-cloud-maven
-      shellScript: mvn deploy:deploy-file
-    env:
-      PLUGIN_DEBUG: "true"
-      PLUGIN_INSECURE: "true"
-- name: Publish
-  steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: suite-cloud-parent
-      pushRemote: true
-      registry: 10.0.0.203:5000
+      shellScript: mvn clean deploy
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
