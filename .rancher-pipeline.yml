@@ -4,6 +4,9 @@ stages:
   - runScriptConfig:
       image: 10.0.0.205:5000/suite-cloud/suite-cloud-maven
       shellScript: mvn deploy:deploy-file
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
 - name: Publish
   steps:
   - publishImageConfig:
@@ -12,4 +15,7 @@ stages:
       tag: suite-cloud/suite-cloud-parent
       pushRemote: true
       registry: 127.0.0.1:34709
+    env:
+      PLUGIN_DEBUG: "true"
+      PLUGIN_INSECURE: "true"
 notification: {}
