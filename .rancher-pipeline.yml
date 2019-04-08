@@ -14,8 +14,9 @@ stages:
       buildContext: .
       tag: suite-cloud/suite-cloud-parent
       pushRemote: true
-      registry: 127.0.0.1:34709
+      registry: 10.0.0.203:5000
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
+timeout: 60
 notification: {}
