@@ -3,7 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: 10.0.0.203:5000/suite-cloud-maven
-      shellScript: mvn clean deploy
+      shellScript: mvn clean deploy --settings /usr/share/maven/ref/settings-docker.xml
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
