@@ -2,7 +2,7 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: 10.0.0.205:5000/suite-cloud/suite-cloud-maven
+      image: 10.0.0.203:5000/suite-cloud/suite-cloud-maven
       shellScript: mvn deploy:deploy-file
     env:
       PLUGIN_DEBUG: "true"
